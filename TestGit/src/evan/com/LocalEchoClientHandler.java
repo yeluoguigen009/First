@@ -9,7 +9,7 @@ public class LocalEchoClientHandler extends SimpleChannelInboundHandler<Object> 
     @Override
     public void messageReceived(ChannelHandlerContext ctx, Object msg) {
         // Print as received
-        System.out.println(msg);
+        System.out.println("Server said :" + msg);
     }
 
     @Override

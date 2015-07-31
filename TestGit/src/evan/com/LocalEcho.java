@@ -17,15 +17,15 @@ import io.netty.handler.logging.LoggingHandler;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Random;
 
 public final class LocalEcho {
 
-    static final String PORT = System.getProperty("port", "test_port");
+    static final String PORT = System.getProperty("port", "10086");
 
     public static void main(String[] args) throws Exception {
         // Address to bind on / connect to.
         final LocalAddress addr = new LocalAddress(PORT);
-
         EventLoopGroup serverGroup = new DefaultEventLoopGroup();
         EventLoopGroup clientGroup = new NioEventLoopGroup(); // NIO event loops are also OK
         try {
@@ -72,6 +72,7 @@ public final class LocalEcho {
             System.out.println("Enter text (quit to end)");
             ChannelFuture lastWriteFuture = null;
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+            Random r = new Random();
             for (;;) {
                 String line = in.readLine();
                 if (line == null || "quit".equalsIgnoreCase(line)) {

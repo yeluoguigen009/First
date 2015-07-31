@@ -9,6 +9,7 @@ public class LocalEchoServerHandler extends ChannelHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         // Write back as received
+    	System.out.println("Client said :" + msg);
         ctx.write(msg);
     }
 
