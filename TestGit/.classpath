@@ -17,5 +17,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="E:/softwares/netty-5.0.0.Alpha2/jar/all-in-one/netty-all-5.0.0.Alpha2.jar"/>
+	<classpathentry kind="lib" path="E:/softwares/rabbitmqcli/amqp-client-3.5.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

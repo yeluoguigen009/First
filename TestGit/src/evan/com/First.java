@@ -2,12 +2,8 @@ package evan.com;
 
 public class First {
 
-    public static void main(String[] args) {
-        new WorkerThread().start();
-        try {
-            Thread.sleep(2500);
-        } catch (InterruptedException e) {}
-        System.out.println("Main Thread ending") ;
+    public static void main(String[] args) throws Exception {
+    	LocalEchoClient.main(null);
     }
 
 }
